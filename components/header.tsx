@@ -53,7 +53,7 @@ export default function Header({}: Props) {
         transition={{
           duration: 0.8,
         }}
-        className="flex flex-row items-center text-gray-300 cursor-pointer"
+        className="flex flex-row items-center text-textPri cursor-pointer"
       >
         <SocialIcon
           className="cursor-pointer"
