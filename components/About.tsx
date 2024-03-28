@@ -30,7 +30,7 @@ export default function About({}: Props) {
       <div className="space-y-10 px-0 md:px-10">
         <h2 className="text-4xl font-semibold">My Background</h2>
         <p className="text-base">
-          A dedicated and results-driven Software Engineer with a Bachelor's
+          A dedicated and results-driven Software Engineer with a Bachelor&lsquo;s
           degree in Information Technology from La Trobe University,
           specializing in innovative front-end and back-end development.
           Demonstrates a strong commitment to continuous learning and
