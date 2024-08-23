@@ -4,6 +4,9 @@
 
 @layer components {
   .heroButton {
-    @apply px-6 py-2 uppercase hover:bg-textSec hover:bg-opacity-30 rounded-full text-xs tracking-widest text-textPri transition-all hover:text-textSec;
+    @apply px-5 py-2 uppercase hover:bg-textSec hover:bg-opacity-30 rounded-full text-xs tracking-widest text-textPri transition-all hover:text-textSec;
   }
+}
+html {
+  scroll-behavior: smooth;
 }
