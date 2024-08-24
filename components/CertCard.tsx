@@ -9,14 +9,14 @@ type skills = {
 };
 
 type Certificate = {
-  id: number;
-  title: string;
-  company: string;
-  logo: string;
-  date: string;
-  location: string;
-  skills: skills[];
-  description: string[];
+  id?: number;
+  title?: string;
+  company?: string;
+  logo?: string;
+  date?: string;
+  location?: string;
+  skills?: skills[];
+  description?: string[];
   link?: string; // Add this optional property
 };
 
@@ -48,7 +48,7 @@ function CertCard({ certificate }: Props) {
       >
         <Image
           src={`/Data${certificate.logo}`}
-          alt={certificate.company}
+          alt={certificate.company?.toLowerCase() ?? ""}
           layout="fill"
           objectFit="contain"
           className="rounded-full"
@@ -59,7 +59,7 @@ function CertCard({ certificate }: Props) {
         <h4 className="text-4xl font-light">{certificate.title}</h4>
         <h5 className="font-bold text-2xl mt-1">{certificate.company}</h5>
         <div className="flex flex-wrap gap-2 my-2">
-          {certificate.skills.map((skill, index) => (
+          {certificate.skills?.map((skill, index) => (
             <div
               key={index}
               className="flex items-center space-x-1 bg-white rounded-full px-3 py-1"
@@ -70,7 +70,7 @@ function CertCard({ certificate }: Props) {
         </div>
         <p className="uppercase py-5 text-gray-500">{certificate.date}</p>
         <ul className="list-disc space-y-4 ml-5 text-lg">
-          {certificate.description.map((task, index) => (
+          {certificate.description?.map((task, index) => (
             <li key={index}>{task}</li>
           ))}
         </ul>

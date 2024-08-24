@@ -15,6 +15,33 @@ import {
 import data from "@Component/quocVuData.json";
 import { motion } from "framer-motion";
 
+interface Certificate {
+  date: string;
+  title: string;
+  issuer: string;
+  description: string[];
+}
+
+interface Education {
+  date: string;
+  degree: string;
+  institution: string;
+  description: string;
+}
+
+interface Award {
+  date: string;
+  title: string;
+  issuer: string;
+  description: string;
+}
+
+interface Data {
+  education: Education[];
+  awards: Award[];
+  certificates: Certificate[];
+}
+
 const TimelineElement = ({
   date,
   icon,
@@ -26,9 +53,23 @@ const TimelineElement = ({
   iconStyle,
   isExpanded,
   onToggle,
+}: {
+  date: string;
+  icon: React.ReactNode;
+  title: string;
+  subtitle: string;
+  description: string;
+  contentStyle: React.CSSProperties;
+  contentArrowStyle: React.CSSProperties;
+  iconStyle: React.CSSProperties;
+  isExpanded: boolean;
+  onToggle: () => void;
 }) => {
   const shortDescription =
     description.split(" ").slice(0, 10).join(" ") + "...";
+
+  // Check if the original description is longer than the shortened one
+  const isLongDescription = description.length > shortDescription.length;
 
   return (
     <VerticalTimelineElement
@@ -42,43 +83,46 @@ const TimelineElement = ({
         transition: "all 0.3s ease-in-out",
       }}
       contentArrowStyle={contentArrowStyle}
-      onClick={onToggle}
     >
       <h3 className="vertical-timeline-element-title text-xl">{title}</h3>
       <h4 className="vertical-timeline-element-subtitle text-sm italic">
         {subtitle}
       </h4>
       <p className="transition-all duration-300 ease-in-out">
-        {isExpanded ? description : shortDescription}
+        {isExpanded || !isLongDescription ? description : shortDescription}
       </p>
-      <button
-        className="mt-2 flex items-center text-sm "
-        onClick={(e) => {
-          e.stopPropagation();
-          onToggle();
-        }}
-      >
-        {isExpanded ? (
-          <>
-            Show Less <FaChevronUp className="ml-1" />
-          </>
-        ) : (
-          <>
-            Read More <FaChevronDown className="ml-1" />
-          </>
-        )}
-      </button>
+      {isLongDescription && (
+        <button
+          className="mt-2 flex items-center text-sm"
+          onClick={(e) => {
+            e.stopPropagation();
+            onToggle();
+          }}
+        >
+          {isExpanded ? (
+            <div className="text-[#603F26] px-2 py-1 rounded-md mr-2 mb-2 bg-[#FFDBB5] flex items-center">
+              Show Less <FaChevronUp className="ml-1" />
+            </div>
+          ) : (
+            <div className="text-[#603F26] px-2 py-1 rounded-md mr-2 mb-2 bg-[#FFDBB5] flex  items-center">
+              Read More <FaChevronDown className="ml-1" />
+            </div>
+          )}
+        </button>
+      )}
     </VerticalTimelineElement>
   );
 };
 
 const Timeline = () => {
-  const [expandedEvents, setExpandedEvents] = useState({});
-  const toggleEvent = (index) => {
+  const [expandedEvents, setExpandedEvents] = useState<{
+    [key: number]: boolean;
+  }>({});
+  const toggleEvent = (index: number) => {
     setExpandedEvents((prev) => ({ ...prev, [index]: !prev[index] }));
   };
 
-  const { education, awards, projects, certificates } = data;
+  const { education, awards, certificates } = data as Data;
 
   const certificateStyle = {
     contentStyle: { background: "rgb(255, 234, 197)", color: "#603F26" },
@@ -88,7 +132,7 @@ const Timeline = () => {
 
   const educationStyle = {
     contentStyle: { background: "#D5ED9F", color: "#603F26" },
-    contentArrowStyle: { borderRight: "7px solid rrgb(136,214,108)" },
+    contentArrowStyle: { borderRight: "7px solid rgb(136,214,108)" },
     iconStyle: { background: "#D5ED9F", color: "#603F26" },
   };
 
@@ -107,7 +151,7 @@ const Timeline = () => {
       description: cert.description.join(" "),
       ...certificateStyle,
     }))
-    .sort((a, b) => new Date(b.date) - new Date(a.date));
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   const educationEvents = education
     .map((edu) => ({
@@ -118,7 +162,7 @@ const Timeline = () => {
       description: edu.description,
       ...educationStyle,
     }))
-    .sort((a, b) => new Date(b.date) - new Date(a.date));
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   const awardEvents = awards
     .map((award) => ({
@@ -129,7 +173,7 @@ const Timeline = () => {
       description: award.description,
       ...awardStyle,
     }))
-    .sort((a, b) => new Date(b.date) - new Date(a.date));
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   const allEvents = [...certificateEvents, ...awardEvents, ...educationEvents];
 

@@ -61,7 +61,9 @@ const Contact: React.FC<Props> = () => {
       <div className="w-full max-w-2xl px-4 text-textPri">
         <h2 className="text-2xl font-bold mb-6 ">
           I have got just what you need.{" "}
-          <span className="underline pl-2 text-[#A28B55]">Let's Talk.</span>
+          <span className="underline pl-2 text-[#A28B55]">
+            Let&apos;s Talk.
+          </span>
         </h2>
 
         <div className="space-y-4 mb-8">

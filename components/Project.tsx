@@ -5,10 +5,6 @@ import quocVuData from "@Component/quocVuData.json";
 const projects = quocVuData.projects;
 
 const ProjectsSection = () => {
-  const handleProjectClick = (project) => {
-    setSelectedProject(project);
-  };
-
   return (
     <motion.div
       initial={{ y: 200, opacity: 0 }}

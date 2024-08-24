@@ -94,9 +94,10 @@ const SkillsSection = () => {
           <Marquee
             key={index}
             direction={index % 2 === 1 ? "right" : "left"}
-            speed={90}
+            speed={100}
             gradient={false}
             loop={0}
+            pauseOnHover={true}
           >
             {chunk.map((skill, skillIndex) => (
               <div
