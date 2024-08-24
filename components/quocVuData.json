@@ -105,7 +105,6 @@
     {
       "id": 1,
       "title": "DT Security Doors & Shutters",
-      "image": ["/Data/images/DT.png"],
       "technologies": [
         { "name": "Next.js", "image": "nextjs.png" },
         { "name": "Tailwind CSS", "image": "tailwind.png" },
@@ -124,7 +123,6 @@
     {
       "id": 2,
       "title": "Cross Platform Training App",
-      "image": "/images/training-app.png",
       "technologies": [
         { "name": "Flutter", "image": "flutter.png" },
         { "name": "Firebase", "image": "firebase.png" }
@@ -135,12 +133,28 @@
       ],
       "link": "https://github.com/Kedoichi/cross-platform-training-app",
 
-      "image": [null]
+      "image": ["/Data/images/flutter.png"]
     },
     {
       "id": 3,
+      "title": "Budget App - Expense Tracker",
+      "technologies": [
+        { "name": "Java", "image": "flutter.png" },
+        { "name": "Android Studio", "image": "arkst.png" },
+        { "name": "Figma", "image": "flutter.png" },
+        { "name": "Firebase", "image": "firebase.png" }
+      ],
+      "description": [
+        "Developed a mobile app focused on UI/UX and integrated Firebase for data storage and authentication",
+        "Utilized Agile development methodologies for iterative updates and improvements"
+      ],
+      "link": "https://github.com/Kedoichi/cross-platform-training-app",
+
+      "image": ["/Data/images/budgetApp.png"]
+    },
+    {
+      "id": 4,
       "title": "Kim Homestay Vũng Tàu",
-      "image": "/images/kim-homestay.png",
       "technologies": [
         { "name": "WordPress", "image": "wordpress.png" },
         { "name": "SMTP", "image": "smtp.png" }
@@ -153,9 +167,8 @@
       "image": ["/Data/images/kim.png"]
     },
     {
-      "id": 4,
+      "id": 5,
       "title": "Broadmeadows Place Medical Clinic",
-      "image": "/images/medical-clinic.png",
       "technologies": [
         { "name": "WordPress", "image": "wordpress.png" },
         { "name": "Custom Plugin", "image": "custom-plugin.png" }
@@ -169,9 +182,8 @@
       "image": ["/Data/images/doc.png"]
     },
     {
-      "id": 5,
+      "id": 6,
       "title": "Fingerprint Attendance and Roster Planning System",
-      "image": "/images/fingerprint-system.png",
       "technologies": [
         { "name": "ESP32", "image": "esp32.png" },
         { "name": "Next.js", "image": "nextjs.png" },

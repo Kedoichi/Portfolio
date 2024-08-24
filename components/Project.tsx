@@ -38,7 +38,7 @@ const ProjectsSection = () => {
                 <img
                   src={project.image[0]}
                   alt={project.title}
-                  className="transition-transform transition-left duration-300 ease-in-out transform w-full h-full object-cover rounded-lg absolute scale-125"
+                  className="transition-transform transition-left duration-300 ease-in-out transform h-full object-cover rounded-lg absolute scale-125"
                 />
               </div>
             ) : (
