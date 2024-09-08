@@ -4,8 +4,8 @@ const nextConfig = {
   reactStrictMode: true,
 
   images: {
-    domains: ["localhost"],
     unoptimized: true,
+    formats: ["image/webp"],
   },
 };
 

@@ -81,19 +81,22 @@ const TimelineElement = ({
         ...contentStyle,
         cursor: "pointer",
         transition: "all 0.3s ease-in-out",
+        padding: "1rem",
       }}
       contentArrowStyle={contentArrowStyle}
     >
-      <h3 className="vertical-timeline-element-title text-xl">{title}</h3>
-      <h4 className="vertical-timeline-element-subtitle text-sm italic">
+      <h3 className="vertical-timeline-element-title text-lg sm:text-xl font-semibold mb-1">
+        {title}
+      </h3>
+      <h4 className="pt-2 vertical-timeline-element-subtitle text-xs sm:text-sm italic mb-2">
         {subtitle}
       </h4>
-      <p className="transition-all duration-300 ease-in-out">
+      <p className="text-sm sm:text-base transition-all duration-300 ease-in-out text-justify md:text-left">
         {isExpanded || !isLongDescription ? description : shortDescription}
       </p>
       {isLongDescription && (
         <button
-          className="mt-2 flex items-center text-sm"
+          className="mt-2 flex items-center text-xs sm:text-sm"
           onClick={(e) => {
             e.stopPropagation();
             onToggle();
@@ -104,7 +107,7 @@ const TimelineElement = ({
               Show Less <FaChevronUp className="ml-1" />
             </div>
           ) : (
-            <div className="text-[#603F26] px-2 py-1 rounded-md mr-2 mb-2 bg-[#FFDBB5] flex  items-center">
+            <div className="text-[#603F26] px-2 py-1 rounded-md mr-2 mb-2 bg-[#FFDBB5] flex items-center">
               Read More <FaChevronDown className="ml-1" />
             </div>
           )}
@@ -185,9 +188,9 @@ const Timeline = () => {
       }}
       transition={{ duration: 1.2 }}
       whileInView={{ y: 0, opacity: 1 }}
-      className="pt-44 flex flex-col relative text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center"
+      className="py-24 sm:py-32 flex flex-col relative text-center max-w-7xl px-4 sm:px-6 md:px-10 mx-auto items-center"
     >
-      <h1 className="absolute top-24 uppercase text-textPri text-2xl tracking-[10px]">
+      <h1 className="uppercase text-textPri text-xl sm:text-2xl tracking-[8px] sm:tracking-[10px] mb-8 sm:mb-12">
         My Journey
       </h1>
       <VerticalTimeline lineColor="#F7DCB9">

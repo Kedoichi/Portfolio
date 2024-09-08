@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import Marquee from "react-fast-marquee";
 import {
   FaHtml5,
@@ -11,7 +11,6 @@ import {
   FaJava,
   FaAws,
   FaDocker,
-  FaCogs,
 } from "react-icons/fa";
 import {
   SiTypescript,
@@ -78,25 +77,29 @@ const skills = [
 ];
 
 const chunkSize = Math.ceil(skills.length / 3);
-const skillChunks = Array.from({ length: 3 }, (_, i) =>
-  skills.slice(i * chunkSize, (i + 1) * chunkSize)
-);
 
-const SkillsSection = () => {
+const SkillsSection: React.FC = () => {
+  const skillChunks = useMemo(
+    () =>
+      Array.from({ length: 3 }, (_, i) =>
+        skills.slice(i * chunkSize, (i + 1) * chunkSize)
+      ),
+    []
+  );
+
   return (
-    <div className="pt-48 flex flex-col relative text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
+    <div className="pt-48 flex flex-col relative text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center h-[90%] md:h-fit">
       <h3 className="absolute top-24 uppercase text-textPri text-2xl tracking-[10px]">
         Skills & Technologies
       </h3>
 
-      <div className="w-[80%]">
+      <div className="w-screen md:w-[80%] lg:w-[95%]">
         {skillChunks.map((chunk, index) => (
           <Marquee
             key={index}
             direction={index % 2 === 1 ? "right" : "left"}
             speed={100}
             gradient={false}
-            loop={0}
             pauseOnHover={true}
           >
             {chunk.map((skill, skillIndex) => (

@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa"; // Updated imports
 import emailjs from "@emailjs/browser";
 
 interface Props {}
@@ -68,15 +68,15 @@ const Contact: React.FC<Props> = () => {
 
         <div className="space-y-4 mb-8">
           <p className="flex items-center justify-center">
-            <Phone className="text-[#B99470] mr-3" size={18} />
+            <FaPhoneAlt className="text-[#B99470] mr-3" size={18} />
             <span className="text-[#A28B55]">0404479019</span>
           </p>
           <p className="flex items-center justify-center">
-            <Mail className="text-[#B99470]  mr-3" size={18} />
+            <FaEnvelope className="text-[#B99470] mr-3" size={18} />
             <span className="text-[#A28B55]">contact@quocchic.net</span>
           </p>
           <p className="flex items-center justify-center">
-            <MapPin className="text-[#B99470]  mr-3" size={18} />
+            <FaMapMarkerAlt className="text-[#B99470] mr-3" size={18} />
             <span className="text-[#A28B55]">Richmond VIC 3121</span>
           </p>
         </div>

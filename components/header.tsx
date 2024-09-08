@@ -15,7 +15,7 @@ const ContactLink = () => {
   }
 
   return (
-    <header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center z-10 backdrop-blur-[2px]">
+    <header className="sticky top-0 p-2 md:p-5  flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center z-10 backdrop-blur-[2px]">
       <motion.div
         initial={{
           x: -500,
