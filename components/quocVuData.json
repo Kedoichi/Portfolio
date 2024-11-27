@@ -2,25 +2,53 @@
   "experiences": [
     {
       "id": 1,
+      "title": "Full Stack Developer - Contractor",
+      "company": "Digital Crafters",
+      "logo": "/images/digital-crafters.png",
+      "date": "Feb. 2024 – Present",
+      "location": "Melbourne, Australia",
+      "technologies": [
+        { "name": "Next.js", "image": "nextjs.png" },
+        { "name": "React", "image": "react.png" },
+        { "name": "Tailwind CSS", "image": "tailwind.png" },
+        { "name": "Docker", "image": "docker.png" },
+        { "name": "GitHub Actions", "image": "github-actions.png" },
+        { "name": "Google Cloud", "image": "google-cloud.png" },
+        { "name": "WordPress", "image": "wordpress.png" }
+      ],
+      "tasks": [
+        "Developed and deployed 3+ responsive web applications using Next.js, React, and Tailwind CSS; improved client website performance by 40%",
+        "Implemented CI/CD pipelines using GitHub Actions and containerized applications with Docker for deployment on Google Cloud Platform",
+        "Configured and managed DNS, cPanel, and hosting infrastructure for 5+ client websites, ensuring 99.9% uptime",
+        "Developed custom WordPress plugins for booking systems and role-based access control, serving 1000+ monthly users",
+        "Led technical consultations for stack selection, providing infrastructure planning and scalability solutions for 3+ business clients"
+      ]
+    },
+    {
+      "id": 2,
       "title": "Web Developer - Intern",
       "company": "IT BOOST Australia",
       "logo": "/images/itboost.png",
       "date": "Jul. 2023 – Sep. 2023",
       "location": "Melbourne, Australia",
       "technologies": [
-        { "name": "Php", "image": "php.png" },
+        { "name": "CodeIgniter", "image": "codeigniter.png" },
+        { "name": "MySQL", "image": "mysql.png" },
+        { "name": "PHP", "image": "php.png" },
+        { "name": "MomentJS", "image": "momentjs.png" },
         { "name": "Figma", "image": "figma.png" },
-        { "name": "Remote", "image": "terminal.webp" },
         { "name": "SEO", "image": "seo.png" }
       ],
       "tasks": [
-        "Engaged in meaningful web development projects, contributing to frontend and backend tasks",
-        "Adapted to a hybrid work environment with remote responsibilities and in-office meetings",
-        "Gained practical experience in full-stack web development and was introduced to SEO"
+        "Built full-stack Task Management System using CodeIgniter, implementing user authentication, CRUD operations, and drag-and-drop UI",
+        "Engineered Invoice Management System with dynamic currency handling and SQL optimization, processing 500+ monthly transactions",
+        "Developed reusable components including timezone picker (MomentJS), password generator, and image upload system",
+        "Optimized MySQL queries achieving 60% faster response times for large dataset operations",
+        "Collaborated in hybrid environment using Agile methodology, participating in daily standups and sprint planning"
       ]
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "Information Technology Teacher",
       "company": "TEKY ACADEMY",
       "logo": "/images/teky.png",
@@ -29,14 +57,17 @@
       "technologies": [
         { "name": "Scratch", "image": "scratch.png" },
         { "name": "Tynker", "image": "tynker.png" },
+        { "name": "Unity", "image": "unity.png" },
         { "name": "Minecraft", "image": "minecraft.png" },
         { "name": "Roblox", "image": "roblox.png" },
         { "name": "Mindstorms", "image": "mindstorms.png" },
         { "name": "Arduino", "image": "arduino.png" }
       ],
       "tasks": [
-        "Provided programming knowledge through Scratch, Tynker, Unity, Minecraft, and Roblox",
-        "Used Mindstorms and Arduino to teach about IoT and encouraged analytical thinking and problem-solving skills"
+        "Instructed 25+ students across 5 classes in programming fundamentals using Scratch, Tynker, Unity, Minecraft, and Roblox",
+        "Led hands-on robotics and IoT workshops using LEGO Mindstorms and Arduino, achieving 90% student engagement",
+        "Designed and implemented project-based curriculum focusing on logical thinking and problem-solving skills",
+        "Maintained detailed progress reports and conducted regular parent consultations, achieving 95% satisfaction rate"
       ]
     }
   ],
@@ -51,8 +82,8 @@
         { "name": "Agile", "image": "agile.png" },
         { "name": "Waterfall", "image": "waterfall.png" },
         { "name": "Scrum", "image": "scrum.png" },
-        { "name": "Critical Thinking", "image": "scrum.png" },
-        { "name": "Teamwork", "image": "scrum.png" }
+        { "name": "Critical Thinking", "image": "critical-thinking.png" },
+        { "name": "Teamwork", "image": "teamwork.png" }
       ],
       "description": [
         "Demonstrated an understanding of key project management concepts by creating a comprehensive presentation analyzing strengths and weaknesses of Agile and Waterfall methodologies",
@@ -69,9 +100,9 @@
       "logo": "/images/jp.png",
       "skills": [
         { "name": "Software Engineering", "image": "software-engineering.png" },
-        { "name": "Git", "image": "" },
-        { "name": "Web Applications", "image": "" },
-        { "name": "Python", "image": "" }
+        { "name": "Git", "image": "git.png" },
+        { "name": "Web Applications", "image": "web-apps.png" },
+        { "name": "Python", "image": "python.png" }
       ],
       "description": [
         "Set up a local dev environment by downloading the necessary files, tools, and dependencies",
@@ -89,10 +120,7 @@
       "skills": [
         { "name": "AWS", "image": "aws.png" },
         { "name": "Elastic Beanstalk", "image": "elastic-beanstalk.png" },
-        {
-          "name": "Solutions Architecture",
-          "image": "solutions-architecture.png"
-        }
+        { "name": "Solutions Architecture", "image": "solutions-architecture.png" }
       ],
       "description": [
         "Designed a simple and scalable hosting architecture based on Elastic Beanstalk for a client experiencing significant growth and slow response times",
@@ -117,7 +145,6 @@
         "Implemented CI/CD pipelines using GitHub Actions and deployed the application on Google Cloud with Docker"
       ],
       "link": "https://github.com/Kedoichi/dt-security-doors-shutters",
-
       "image": ["/Data/images/DT.jpg"]
     },
     {
@@ -132,16 +159,15 @@
         "Utilized Agile development methodologies for iterative updates and improvements"
       ],
       "link": "https://github.com/Kedoichi/cross-platform-training-app",
-
       "image": ["/Data/images/flutter.jpg"]
     },
     {
       "id": 3,
       "title": "Budget App - Expense Tracker",
       "technologies": [
-        { "name": "Java", "image": "flutter.png" },
-        { "name": "Android Studio", "image": "arkst.png" },
-        { "name": "Figma", "image": "flutter.png" },
+        { "name": "Java", "image": "java.png" },
+        { "name": "Android Studio", "image": "android-studio.png" },
+        { "name": "Figma", "image": "figma.png" },
         { "name": "Firebase", "image": "firebase.png" }
       ],
       "description": [
@@ -149,7 +175,6 @@
         "Utilized Agile development methodologies for iterative updates and improvements"
       ],
       "link": "https://github.com/Kedoichi/cross-platform-training-app",
-
       "image": ["/Data/images/budgetApp.jpg"]
     },
     {
@@ -163,7 +188,6 @@
         "Built a robust website for a hospitality service using WordPress, integrating SMTP for mail services and booking functionalities"
       ],
       "link": "https://github.com/Kedoichi/kim-homestay-vung-tau",
-
       "image": ["/Data/images/kim.jpg"]
     },
     {
@@ -178,7 +202,6 @@
         "Integrated role-based access for staff to modify working hours, shifts, and availability, while enabling moderators to edit web content and manage a blogging system"
       ],
       "link": "https://github.com/Kedoichi/broadmeadows-place-medical-clinic",
-
       "image": ["/Data/images/doc.jpg"]
     },
     {

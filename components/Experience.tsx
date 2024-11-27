@@ -11,9 +11,19 @@ import {
   FaCertificate,
   FaChevronDown,
   FaChevronUp,
+  FaBriefcase,
 } from "react-icons/fa";
 import data from "@Component/quocVuData.json";
 import { motion } from "framer-motion";
+
+interface Experience {
+  date: string;
+  title: string;
+  company: string;
+  location: string;
+  tasks: string[];
+  technologies: { name: string; image: string }[];
+}
 
 interface Certificate {
   date: string;
@@ -37,6 +47,7 @@ interface Award {
 }
 
 interface Data {
+  experiences: Experience[];
   education: Education[];
   awards: Award[];
   certificates: Certificate[];
@@ -53,6 +64,7 @@ const TimelineElement = ({
   iconStyle,
   isExpanded,
   onToggle,
+  technologies,
 }: {
   date: string;
   icon: React.ReactNode;
@@ -64,6 +76,7 @@ const TimelineElement = ({
   iconStyle: React.CSSProperties;
   isExpanded: boolean;
   onToggle: () => void;
+  technologies?: { name: string; image: string }[];
 }) => {
   const shortDescription =
     description.split(" ").slice(0, 10).join(" ") + "...";
@@ -94,6 +107,18 @@ const TimelineElement = ({
       <p className="text-sm sm:text-base transition-all duration-300 ease-in-out text-justify md:text-left">
         {isExpanded || !isLongDescription ? description : shortDescription}
       </p>
+      {technologies && technologies.length > 0 && (
+        <div className="flex flex-wrap gap-2 mt-3">
+          {technologies.map((tech, index) => (
+            <span
+              key={index}
+              className="text-[#603F26] px-2 py-1 rounded-md text-xs bg-white/50"
+            >
+              {tech.name}
+            </span>
+          ))}
+        </div>
+      )}
       {isLongDescription && (
         <button
           className="mt-2 flex items-center text-xs sm:text-sm"
@@ -125,7 +150,13 @@ const Timeline = () => {
     setExpandedEvents((prev) => ({ ...prev, [index]: !prev[index] }));
   };
 
-  const { education, awards, certificates } = data as Data;
+  const { experiences, education, awards, certificates } = data as Data;
+
+  const experienceStyle = {
+    contentStyle: { background: "#FFE4C4", color: "#603F26" },
+    contentArrowStyle: { borderRight: "7px solid #FFE4C4" },
+    iconStyle: { background: "#FFE4C4", color: "#603F26" },
+  };
 
   const certificateStyle = {
     contentStyle: { background: "rgb(255, 234, 197)", color: "#603F26" },
@@ -135,15 +166,27 @@ const Timeline = () => {
 
   const educationStyle = {
     contentStyle: { background: "#D5ED9F", color: "#603F26" },
-    contentArrowStyle: { borderRight: "7px solid rgb(136,214,108)" },
+    contentArrowStyle: { borderRight: "7px solid rgb(213,237,159)" },
     iconStyle: { background: "#D5ED9F", color: "#603F26" },
   };
 
   const awardStyle = {
     contentStyle: { background: "#FFDBB5", color: "#603F26" },
-    contentArrowStyle: { borderRight: "7px solid rgb(213,237,159)" },
+    contentArrowStyle: { borderRight: "7px solid rgb(255,219,181)" },
     iconStyle: { background: "#FFDBB5", color: "#603F26" },
   };
+
+  const experienceEvents = experiences
+    .map((exp) => ({
+      date: exp.date,
+      icon: <FaBriefcase />,
+      title: exp.title,
+      subtitle: `${exp.company} | ${exp.location}`,
+      description: exp.tasks.join(" "),
+      technologies: exp.technologies,
+      ...experienceStyle,
+    }))
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   const certificateEvents = certificates
     .map((cert) => ({
@@ -178,7 +221,12 @@ const Timeline = () => {
     }))
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
-  const allEvents = [...certificateEvents, ...awardEvents, ...educationEvents];
+  const allEvents = [
+    ...experienceEvents,
+    ...certificateEvents,
+    ...awardEvents,
+    ...educationEvents,
+  ];
 
   return (
     <motion.div

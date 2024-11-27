@@ -52,14 +52,14 @@ const Contact: React.FC<Props> = () => {
       }}
       transition={{ duration: 1.2 }}
       whileInView={{ opacity: 1 }}
-      className="h-screen flex flex-col relative text-center max-w-7xl mx-auto items-center justify-center"
+      className="min-h-screen flex flex-col relative px-4 sm:px-6 md:px-8 py-24 max-w-7xl mx-auto"
     >
-      <h3 className="absolute top-24 uppercase text-gray-500 text-2xl tracking-[10px]">
+      <h3 className="uppercase text-gray-500 text-xl sm:text-2xl tracking-[8px] sm:tracking-[10px] mb-8 sm:mb-12 text-center">
         Contact
       </h3>
 
-      <div className="w-full max-w-2xl px-4 text-textPri">
-        <h2 className="text-2xl font-bold mb-6 ">
+      <div className="flex-grow flex flex-col items-center justify-center w-full max-w-2xl mx-auto text-textPri">
+        <h2 className="text-xl sm:text-2xl font-bold mb-6 text-center">
           I have got just what you need.{" "}
           <span className="underline pl-2 text-[#A28B55]">
             Let&apos;s Talk.
