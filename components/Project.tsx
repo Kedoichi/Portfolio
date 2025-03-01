@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import quocVuData from "@Component/quocVuData.json";
 import Image from "next/image";
+import LinkButton from "./LinkBTN";
 
 const projects = quocVuData.projects;
 
@@ -13,10 +14,10 @@ const ProjectsSection = () => {
       whileInView={{ y: 0, opacity: 1 }}
       className="py-24 sm:py-32 flex flex-col relative text-center max-w-7xl px-4 sm:px-6 md:px-10 mx-auto items-center"
     >
-      <h3 className="uppercase text-textPri text-xl sm:text-2xl tracking-[8px] sm:tracking-[10px] mb-4">
+      <h3 className="uppercase text-textPri text-xl sm:text-2xl tracking-[8px] sm:tracking-[10px] mb-4 z-50">
         My Projects
       </h3>
-      <h5 className="text-textPri text-sm sm:text-base tracking-[1px] font-extralight italic mb-8 sm:mb-12">
+      <h5 className="text-textPri text-sm sm:text-base tracking-[1px] font-extralight italic mb-8 sm:mb-12 z-50">
         I have worked on a wide range of websites. Here are some of my web
         development projects.
       </h5>
@@ -60,6 +61,26 @@ const ProjectsSection = () => {
                     </span>
                   ))}
                 </div>
+                {project.link && (
+                  <div
+                    className="mt-4 md:mt-auto pt-4"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <LinkButton
+                      href={project.link}
+                      isGithub={project.link.includes("github.com")}
+                      buttonType="primary"
+                    />
+                  </div>
+                )}
+                {project.live && (
+                  <div
+                    className="mt-4 md:mt-auto pt-4"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <LinkButton href={project.live} buttonType="primary" />
+                  </div>
+                )}
               </div>
             </div>
           </div>

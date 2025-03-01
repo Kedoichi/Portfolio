@@ -74,6 +74,27 @@
   "certificates": [
     {
       "id": 1,
+      "title": "Microsoft Certified: Azure Fundamentals",
+      "issuer": "Microsoft",
+      "date": "February 2025",
+      "logo": "/images/microsoft.svg",
+      "skills": [
+        { "name": "Cloud Computing", "image": "cloud.png" },
+        { "name": "Azure", "image": "azure.png" },
+        { "name": "Cloud Security", "image": "security.png" },
+        { "name": "IaaS", "image": "iaas.png" },
+        { "name": "PaaS", "image": "paas.png" },
+        { "name": "SaaS", "image": "saas.png" }
+      ],
+      "description": [
+        "Validated foundational understanding of cloud concepts and Azure services, including core Azure architectural components, key products, solutions, and management tools",
+        "Demonstrated knowledge of general security, network security, identity, governance, privacy, and compliance features in Azure, as well as Azure cost management and service level agreements",
+        "Built competency in core cloud service types including compute, networking, storage, and database services, showcasing ability to identify Azure solutions for various business scenarios"
+      ],
+      "link": "https://learn.microsoft.com/en-au/users/quocchic/credentials/7746a858f3ed8535"
+    },
+    {
+      "id": 2,
       "title": "Cognizant Agile Methodology Job Simulation",
       "issuer": "Forage",
       "date": "August 2024",
@@ -93,7 +114,7 @@
       "link": "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Cognizant/ZZswQd6xGydd758vz_Cognizant_SpxwrsNQ6Mny9irdb_1723963917528_completion_certificate.pdf"
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "J.P. Morgan Software Engineering Virtual Experience",
       "issuer": "Forage",
       "date": "August 2024",
@@ -112,7 +133,7 @@
       "link": "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/J.P.%20Morgan/R5iK7HMxJGBgaSbvk_J.P.%20Morgan_SpxwrsNQ6Mny9irdb_1723987391527_completion_certificate.pdf"
     },
     {
-      "id": 3,
+      "id": 4,
       "title": "AWS APAC Solutions Architecture Virtual Experience Program",
       "issuer": "Forage",
       "date": "August 2024",
@@ -120,7 +141,10 @@
       "skills": [
         { "name": "AWS", "image": "aws.png" },
         { "name": "Elastic Beanstalk", "image": "elastic-beanstalk.png" },
-        { "name": "Solutions Architecture", "image": "solutions-architecture.png" }
+        {
+          "name": "Solutions Architecture",
+          "image": "solutions-architecture.png"
+        }
       ],
       "description": [
         "Designed a simple and scalable hosting architecture based on Elastic Beanstalk for a client experiencing significant growth and slow response times",
@@ -144,7 +168,7 @@
         "Developed the company website with modern technologies including Next.js and Tailwind CSS",
         "Implemented CI/CD pipelines using GitHub Actions and deployed the application on Google Cloud with Docker"
       ],
-      "link": "https://github.com/Kedoichi/dt-security-doors-shutters",
+      "live": "https://dtsecuritydoorsandshutters.com.au/",
       "image": ["/Data/images/DT.jpg"]
     },
     {
@@ -158,7 +182,7 @@
         "Developed a mobile app focused on UI/UX and integrated Firebase for data storage and authentication",
         "Utilized Agile development methodologies for iterative updates and improvements"
       ],
-      "link": "https://github.com/Kedoichi/cross-platform-training-app",
+      "link": "https://github.com/NoCAP-Capstone-Sem-2-2023/Iwipe",
       "image": ["/Data/images/flutter.jpg"]
     },
     {
@@ -174,7 +198,7 @@
         "Developed a mobile app focused on UI/UX and integrated Firebase for data storage and authentication",
         "Utilized Agile development methodologies for iterative updates and improvements"
       ],
-      "link": "https://github.com/Kedoichi/cross-platform-training-app",
+      "link": "https://github.com/Kedoichi/BudgetPocket/branches",
       "image": ["/Data/images/budgetApp.jpg"]
     },
     {
@@ -187,7 +211,7 @@
       "description": [
         "Built a robust website for a hospitality service using WordPress, integrating SMTP for mail services and booking functionalities"
       ],
-      "link": "https://github.com/Kedoichi/kim-homestay-vung-tau",
+      "live": "https://kimhomestayvungtau.com/",
       "image": ["/Data/images/kim.jpg"]
     },
     {
@@ -201,7 +225,7 @@
         "Developed a comprehensive clinic management website using WordPress, featuring a custom booking plugin to handle service scheduling",
         "Integrated role-based access for staff to modify working hours, shifts, and availability, while enabling moderators to edit web content and manage a blogging system"
       ],
-      "link": "https://github.com/Kedoichi/broadmeadows-place-medical-clinic",
+      "live": "https://broadmeadowsplacemc.com.au/",
       "image": ["/Data/images/doc.jpg"]
     },
     {

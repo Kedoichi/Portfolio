@@ -238,7 +238,7 @@ const Timeline = () => {
       whileInView={{ y: 0, opacity: 1 }}
       className="py-24 sm:py-32 flex flex-col relative text-center max-w-7xl px-4 sm:px-6 md:px-10 mx-auto items-center"
     >
-      <h1 className="uppercase text-textPri text-xl sm:text-2xl tracking-[8px] sm:tracking-[10px] mb-8 sm:mb-12">
+      <h1 className="uppercase text-textPri text-xl sm:text-2xl tracking-[8px] sm:tracking-[10px] mb-8 sm:mb-12 z-50">
         My Journey
       </h1>
       <VerticalTimeline lineColor="#F7DCB9">

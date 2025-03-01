@@ -87,7 +87,7 @@ const SkillsSection: React.FC = () => {
 
   return (
     <div className="pt-48 flex flex-col relative text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center h-[90%] md:h-fit">
-      <h3 className="absolute top-24 uppercase text-textPri text-2xl tracking-[10px]">
+      <h3 className="absolute top-24 uppercase text-textPri text-2xl tracking-[10px] z-50">
         Skills & Technologies
       </h3>
 
